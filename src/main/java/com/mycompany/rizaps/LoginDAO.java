@@ -33,8 +33,8 @@ public class LoginDAO {
             e.printStackTrace();
 
             throw new RuntimeException(
-                    "Gagal melakukan proses login Hibernate: "
-                    + e.getMessage(), e
+                "Gagal melakukan proses login Hibernate: "
+                + e.getMessage(), e
             );
         }
     }
