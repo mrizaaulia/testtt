@@ -32,6 +32,11 @@ public class LoginForm extends javax.swing.JFrame {
         txtPassword = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         txtUsername = new javax.swing.JTextField();
+        lblkonfirmasi = new javax.swing.JLabel();
+        txtkonfirmasi = new javax.swing.JPasswordField();
+        btnDaftar = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
+        btnRegistrasi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,6 +59,29 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
 
+        lblkonfirmasi.setText("Konfimasi Password");
+
+        btnDaftar.setText("Daftar");
+        btnDaftar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDaftarActionPerformed(evt);
+            }
+        });
+
+        btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
+
+        btnRegistrasi.setText("Registrasi");
+        btnRegistrasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrasiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -61,22 +89,32 @@ public class LoginForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(174, 174, 174)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtUsername))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(174, 174, 174)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtUsername))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblkonfirmasi)
+                                    .addComponent(btnKembali))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnDaftar)
+                                    .addComponent(txtkonfirmasi)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnRegistrasi))
+                                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(113, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -92,9 +130,19 @@ public class LoginForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(71, 71, 71))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(btnRegistrasi))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblkonfirmasi)
+                    .addComponent(txtkonfirmasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnDaftar)
+                .addGap(18, 18, 18)
+                .addComponent(btnKembali)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();
@@ -148,6 +196,96 @@ public class LoginForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPasswordActionPerformed
 
+    private void btnRegistrasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrasiActionPerformed
+    lblkonfirmasi.setVisible(true);
+    txtkonfirmasi.setVisible(true);
+    btnDaftar.setVisible(true);
+    btnKembali.setVisible(true);
+
+    jButton1.setVisible(false);
+    btnRegistrasi.setVisible(false);
+    }//GEN-LAST:event_btnRegistrasiActionPerformed
+
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+    lblkonfirmasi.setVisible(false);
+    txtkonfirmasi.setVisible(false);
+    btnDaftar.setVisible(false);
+    btnKembali.setVisible(false);
+
+    jButton1.setVisible(true);
+    btnRegistrasi.setVisible(true);
+    }//GEN-LAST:event_btnKembaliActionPerformed
+
+    private void btnDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftarActionPerformed
+    
+    String username = txtUsername.getText().trim();
+    String password = new String(txtPassword.getPassword()).trim();
+    String konfirmasi = new String(txtkonfirmasi.getPassword()).trim();
+
+    if (username.isEmpty() || password.isEmpty() || konfirmasi.isEmpty()) {
+    javax.swing.JOptionPane.showMessageDialog(
+        this, "Semua kolom wajib diisi!"
+    );
+    return;
+}
+
+    if (!password.equals(konfirmasi)) {
+    javax.swing.JOptionPane.showMessageDialog(
+        this, "Konfirmasi password tidak cocok!"
+    );
+    return;
+}
+
+    try (org.hibernate.Session session =
+        HibernateUtil.getSessionFactory().openSession()) {
+
+    // Periksa apakah username sudah digunakan
+    Long jumlah = session.createQuery(
+        "SELECT COUNT(l) FROM Login l WHERE l.username = :uname",
+        Long.class
+    ).setParameter("uname", username).uniqueResult();
+
+    if (jumlah != null && jumlah > 0) {
+        javax.swing.JOptionPane.showMessageDialog(
+            this, "Username sudah digunakan!"
+        );
+        return;
+    }
+
+    // Simpan akun baru
+    Login akunBaru = new Login();
+    akunBaru.setUsername(username);
+    akunBaru.setPassword(password);
+
+    org.hibernate.Transaction tx = session.beginTransaction();
+    session.persist(akunBaru);
+    tx.commit();
+
+    javax.swing.JOptionPane.showMessageDialog(
+        this, "Registrasi berhasil! Silakan login."
+    );
+
+    // Kembali ke tampilan Login
+    lblkonfirmasi.setVisible(false);
+    txtkonfirmasi.setVisible(false);
+    btnDaftar.setVisible(false);
+    btnKembali.setVisible(false);
+
+    jButton1.setVisible(true);
+    btnRegistrasi.setVisible(true);
+
+    txtUsername.setText("");
+    txtPassword.setText("");
+
+} catch (Exception e) {
+    javax.swing.JOptionPane.showMessageDialog(
+        this, "Registrasi gagal: " + e.getMessage()
+    );
+    e.printStackTrace();
+}
+
+    }//GEN-LAST:event_btnDaftarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -184,11 +322,16 @@ public class LoginForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDaftar;
+    private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnRegistrasi;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblkonfirmasi;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
+    private javax.swing.JPasswordField txtkonfirmasi;
     // End of variables declaration//GEN-END:variables
 }
